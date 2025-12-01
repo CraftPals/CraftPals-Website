@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraftPals - Handmade Items & Unique Gifts (Local Pickup)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom colors for pastel theme */
+        :root {
+            --color-pink-500: #EC4899; 
+            --color-pink-100: #FBCFEA; 
+            --color-blue-100: #BFDBFE; 
+            --color-pink-700: #BE185D; 
+        }
+        .bg-pastel-pink { background-color: var(--color-pink-100); }
+        .bg-pastel-blue { background-color: var(--color-blue-100); }
+        .text-accent { color: var(--color-pink-700); }
+        .bg-accent { background-color: var(--color-pink-500); }
+        .hover\:bg-accent-hover:hover { background-color: var(--color-pink-700); }
+
+        /* Custom Star Pattern Overlay for accent backgrounds */
+        .star-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0l2.6 6.8L20 7.4l-5.6 5.2L16.4 20 10 16.2 3.6 20 5.6 12.6 0 7.4l7.4-.6L10 0z' fill='%23F9A8D4' fill-opacity='0.2'/%3E%3C/svg%3E");
+            background-size: 20px 20px;
+        }
+
+        /* Enforce a large size for the About Us content */
+        .about-us-content {
+            min-height: 500px; /* Ensures a long visual section */
+        }
+
+        /* Important for WordPress: Overrides default WP wrapper margins */
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-red-400 text-white text-center py-2 font-bold sticky top-0 z-50 shadow-md">
+        ⚠️ IMPORTANT: LOCAL PICKUP ONLY! We do not offer shipping.
+    </div>
+
+    <header class="sticky top-8 md:top-0 z-40 bg-white shadow-lg">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <a href="#home" class="text-3xl font-bold text-accent">CraftPals ✨</a>
+            
+            <nav class="hidden md:flex space-x-6 font-semibold">
+                <a href="#home" class="hover:text-pink-500 transition duration-300">Home</a>
+                <a href="#about" class="hover:text-pink-500 transition duration-300">About Us</a>
+                <a href="#products" class="hover:text-pink-500 transition duration-300">Products</a>
+                <a href="#seasonal" class="hover:text-pink-500 transition duration-300">Seasonal</a>
+                <a href="#gallery" class="hover:text-pink-500 transition duration-300">Gallery</a>
+                <a href="#rewards" class="hover:text-pink-500 transition duration-300">Rewards</a>
+                <a href="#contact" class="hover:text-pink-500 transition duration-300">Order & Pickup</a>
+            </nav>
+
+            <button id="mobile-menu-button" class="md:hidden p-2 focus:outline-none">
+                <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        
+        <nav id="mobile-menu" class="hidden md:hidden bg-pastel-blue text-center pb-4">
+            <a href="#home" class="block py-2 hover:bg-pink-100">Home</a>
+            <a href="#about" class="block py-2 hover:bg-pink-100">About Us</a>
+            <a href="#products" class="block py-2 hover:bg-pink-100">Products</a>
+            <a href="#seasonal" class="block py-2 hover:bg-pink-100">Seasonal</a>
+            <a href="#gallery" class="block py-2 hover:bg-pink-100">Gallery</a>
+            <a href="#rewards" class="block py-2 hover:bg-pink-100">Rewards</a>
+            <a href="#contact" class="block py-2 hover:bg-pink-100">Order & Pickup</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="bg-pastel-pink py-20 md:py-32 text-center border-b-8 border-pink-300">
+            <div class="container mx-auto px-6">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-pink-700 leading-tight mb-4">
+                    Handmade Happiness, Crafted by Friends.
+                </h1>
+                <p class="text-xl md:text-2xl text-pink-600 mb-8 max-w-4xl mx-auto">
+                    Welcome to CraftPals! We specialize in unique, colorful bracelets, paper squishes, and more—all available for easy local pickup at the **neighborhood playground**!
+                </p>
+                <div class="md:flex justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                    <a href="#about" class="inline-block bg-accent text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-accent-hover transition duration-300 transform hover:scale-105">
+                        📖 Learn Our Story
+                    </a>
+                    <a href="#products" class="inline-block text-pink-700 font-bold text-lg hover:underline transition duration-300">
+                        See Our Colorful Bracelets →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 md:py-24 bg-white about-us-content">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 text-pink-700">💖 Who Are the CraftPals?</h2>
+                <div class="md:flex md:space-x-12 items-start">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <p class="text-xl font-bold mb-4 text-blue-700">The Pal Philosophy</p>
+                        <p class="mb-4 text-lg">
+                            We are more than just crafters—we are **Pals**! Our business is founded on friendship and the pure joy of making something beautiful. We treat every single customer like a valued member of our crafting circle, ensuring every transaction is as cheerful and colorful as our products. We pour our hearts, and a lot of glitter, into everything we make.
+                        </p>
+
+                        <p class="text-xl font-bold mb-4 text-blue-700">Our Commitment to Color and Customization</p>
+                        <p class="mb-4 text-lg">
+                            We believe self-expression knows no limits, which is why we offer our items in **all different colors**. From pastel pink to electric blue, we guarantee the perfect shade for your custom request. Our primary goal is to make a high-quality item that is 100% unique to you.
+                        </p>
+                        
+                        <p class="text-xl font-bold mb-4 text-pink-700">Why Handmade Matters</p>
+                        <p class="mb-4 text-lg">
+                            In a world of mass-produced items, our handmade crafts stand out. Each bracelet, key chain, and paper squish is individually crafted, checked for quality, and given a final sprinkle of love. You're not just buying an item; you're supporting a local, friendly business and getting a piece of genuine art.
+                        </p>
+
+                        <h3 class="text-2xl font-bold mt-8 mb-4 text-pink-700">Pickup Details</h3>
+                        <p class="mb-4 text-lg font-bold text-red-600">
+                            **Order fulfillment requires local scheduling and pickup at our designated location:** the **neighborhood playground**.
+                        </p>
+                        <p class="text-lg">
+                            Please see the **Order & Pickup** section for our specific opening hours to arrange a convenient time for collection.
+                        </p>
+                    </div>
+                    
+                    <div class="md:w-1/2">
+                        <div class="bg-pastel-pink h-full min-h-[500px] rounded-xl shadow-2xl flex items-center justify-center border-8 border-pink-400 p-4">
+                            <span class="text-2xl text-pink-800 font-extrabold text-center">  </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="products" class="py-16 md:py-24 bg-pastel-pink star-pattern">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 text-pink-700">🛍️ Explore Our Magical Products</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white rounded-xl shadow-xl p-6 text-center border-4 border-blue-300">
+                        <span class="text-5xl mb-2 block">📿</span>
+                        <h3 class="text-2xl font-bold mb-2 text-pink-700">Wearable Wonders</h3>
+                        <p class="mb-4 text-sm">Design your own! **Choose your colors and charms!** (Bracelets, Hair Beads, Anklets).</p>
+                        <a href="#contact" class="bg-pink-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-pink-600 text-sm">Email for Custom Order</a>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-xl p-6 text-center border-4 border-blue-300">
+                        <span class="text-5xl mb-2 block">☁️</span>
+                        <h3 class="text-2xl font-bold mb-2 text-pink-700">Squishes & Paper Art</h3>
+                        <p class="mb-4 text-sm">Paper Squishes and delicate Origami creations. **Choose your theme and style!**</p>
+                        <a href="#contact" class="bg-pink-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-pink-600 text-sm">Email for Custom Order</a>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-xl p-6 text-center border-4 border-blue-300">
+                        <span class="text-5xl mb-2 block">🔑</span>
+                        <h3 class="text-2xl font-bold mb-2 text-pink-700">Pals On-the-Go</h3>
+                        <p class="mb-4 text-sm">Keychains, Journals, Bookmarks. **Choose your core colors and add-ons!**</p>
+                        <a href="#contact" class="bg-pink-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-pink-600 text-sm">Email for Custom Order</a>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-xl p-6 text-center border-4 border-blue-300">
+                        <span class="text-5xl mb-2 block">🎲</span>
+                        <h3 class="text-2xl font-bold mb-2 text-pink-700">Mystery & Collectibles</h3>
+                        <p class="mb-4 text-sm">Blind Bags for a surprise! Plus, rare Collector Cards. **Choose your mystery category!**</p>
+                        <a href="#contact" class="bg-pink-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-pink-600 text-sm">Email for Custom Order</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="seasonal" class="py-16 md:py-24 bg-pastel-blue">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-6 text-blue-700">🍂 Current Seasonal Wonders! (Limited Time Only)</h2>
+                <p class="text-xl max-w-4xl mx-auto mb-8 text-pink-700">
+                    Our limited-edition items change frequently based on the season and holidays. Don't miss out on these exclusive designs—available for local pickup only!
+                </p>
+                <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-accent-hover transition duration-300">
+                    Order Seasonal Items Now!
+                </a>
+            </div>
+        </section>
+        
+        <section id="gallery" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 text-blue-700">📸 Our Creation Showcase</h2>
+                
+                <div class="mb-16">
+                    <h3 class="text-3xl font-bold text-center mb-6 text-pink-700">⭐ Staff Picks: Most Colorful & Glittery</h3>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="h-40 bg-purple-200 rounded-lg shadow-md flex items-center justify-center">Brightest Bracelet</div>
+                        <div class="h-40 bg-yellow-200 rounded-lg shadow-md flex items-center justify-center">Glitter Squish</div>
+                        <div class="h-40 bg-green-200 rounded-lg shadow-md flex items-center justify-center">Rainbow Keychain</div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-3xl font-bold text-center mb-6 text-blue-700">✨ Happy Customer Gallery</h3>
+                    <p class="text-center text-lg mb-8 text-gray-600">
+                        We post photos here! Customers do **not** submit photos directly.
+                    </p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="h-40 bg-pink-200 rounded-lg shadow-md hover:opacity-75">Customer Photo 1</div>
+                        <div class="h-40 bg-blue-200 rounded-lg shadow-md hover:opacity-75">Customer Photo 2</div>
+                        <div class="h-40 bg-purple-200 rounded-lg shadow-md hover:opacity-75">Customer Photo 3</div>
+                        <div class="h-40 bg-yellow-200 rounded-lg shadow-md hover:opacity-75">Customer Photo 4</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="rewards" class="py-16 md:py-24 bg-pastel-blue star-pattern">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-6 text-pink-700">⭐ Join the CraftPals Rewards!</h2>
+                <p class="text-xl max-w-4xl mx-auto mb-8 text-blue-700 font-semibold">
+                    Get rewarded for being a Pal! Earn **10 points for every $1.00 spent**.
+                </p>
+                <div class="max-w-xl mx-auto mb-10 p-6 bg-white rounded-lg shadow-lg border-2 border-pink-400">
+                    <h4 class="text-2xl font-extrabold text-blue-700 mb-3">Redemption Power:</h4>
+                    <p class="text-lg">💰 **100 Points** = **$1.00 off** your next purchase</p>
+                    <p class="text-lg">🎁 **500 Points** = **One Free Item** of your choice!</p>
+                    <p class="mt-4 text-pink-600 font-semibold">Plus, a free surprise birthday item!</p>
+                </div>
+                <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-accent-hover transition duration-300 transform hover:scale-105">
+                    Sign Up Now for FREE
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 text-pink-700">💌 Order Here & Arrange Local Pickup!</h2>
+                
+                <div class="max-w-xl mx-auto text-center mb-8 bg-blue-50 p-6 rounded-lg border-2 border-blue-400">
+                    <p class="text-xl font-bold mb-2 text-blue-700">How to Place an Order:</p>
+                    <p class="text-lg mb-4">Please send all orders and custom requests to our dedicated email address. We will then confirm your order and arrange pickup at the **neighborhood playground.**</p>
+                    <a href="mailto:yourwebsitededicatedemail@example.com" class="text-3xl font-extrabold text-pink-600 hover:text-pink-700 transition block py-2">
+                        [yourwebsitededicatedemail@example.com]
+                    </a>
+                    
+                    <h4 class="text-xl font-bold mt-6 mb-2 text-pink-700">Email Must Include:</h4>
+                    <ul class="list-disc list-inside text-left mx-auto max-w-sm">
+                        <li>**Item Name / Custom Request Details**</li>
+                        <li>**Desired Color(s)**</li>
+                        <li>**Quantity**</li>
+                    </ul>
+
+                    <h4 class="text-xl font-bold mt-6 mb-2 text-blue-700">Local Pickup Hours:</h4>
+                    <table class="mx-auto text-left w-full max-w-xs border-collapse">
+                        <tr class="border-b">
+                            <td class="py-1 font-semibold">Saturday:</td>
+                            <td class="py-1">10:00 am - 5:00 pm</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-1 font-semibold">Sunday:</td>
+                            <td class="py-1">2:00 pm - 6:00 pm</td>
+                        </tr>
+                        <tr>
+                            <td class="py-1 font-semibold">Friday (Sometimes):</td>
+                            <td class="py-1">6:30 pm - 7:30 pm</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center px-6">
+            <p>&copy; 2025 CraftPals. All rights reserved. Handmade with Love and Sparkle ✨.</p>
+            <p class="mt-2 text-sm text-red-300">NOTE: Local Pickup at Neighborhood Playground Only.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-pink-400">Privacy Policy</a>
+                <span class="text-gray-600">|</span>
+                <a href="#" class="hover:text-pink-400">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-button').onclick = function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
